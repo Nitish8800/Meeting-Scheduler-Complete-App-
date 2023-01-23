@@ -43,7 +43,7 @@ const getSinglePatient = controller(async (req, res) => {
   const patientId = req.params.id;
 
   const patient_details = await Patient.findById(patientId).populate("userID");
-  0;
+  
   if (!patient_details) {
     return res
       .status(404)
